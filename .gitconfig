@@ -1,0 +1,12 @@
+[user]
+  email = me@davidosomething.com
+  name = davidosomething
+[color]
+  ui = auto
+  diff = auto
+  status = auto
+  interactive = auto
+[core]
+  whitespace = nowarn
+  autocrlf = input
+  safecrlf = false

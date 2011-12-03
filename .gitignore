@@ -9,3 +9,13 @@
 .pki/
 src/
 .config/
+.dropbox/
+.gconf/
+.gksu.lock
+.macromedia/
+.pulse-cookie
+.pulse/
+Downloads/
+Dropbox/
+bin/
+.ssh/
