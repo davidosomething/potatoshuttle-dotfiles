@@ -1,0 +1,11 @@
+.bash_history
+.Xauthority
+.vim/
+.viminfo
+.local/
+.cache/
+.dbus/
+.fontconfig/
+.pki/
+src/
+.config/
