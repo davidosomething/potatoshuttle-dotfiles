@@ -20,16 +20,16 @@ export EDITOR='vim'
 
 # prompt
 bash_prompt() {
-  local p_0="\[\033[0m\]"
-  local p_K="\[\033[0;30m\]"
-  local p_R="\[\033[0;31m\]"
-  local p_G="\[\033[0;32m\]"
-  local p_Y="\[\033[0;33m\]"
-  local p_B="\[\033[0;34m\]"
-  local p_P="\[\033[0;35m\]"
-  local p_C="\[\033[0;36m\]"
-  local p_W="\[\033[0;37m\]"
-  PS1="$p_G\u$p_B@$p_G\h$p_C:$p_Y\w\n$p_0\$ "
+  local Z="\[\033[0m\]"
+  local K="\[\033[0;30m\]"
+  local R="\[\033[0;31m\]"
+  local G="\[\033[0;32m\]"
+  local Y="\[\033[0;33m\]"
+  local B="\[\033[0;34m\]"
+  local P="\[\033[0;35m\]"
+  local C="\[\033[0;36m\]"
+  local W="\[\033[0;37m\]"
+  PS1="$G\u$B@$G\h$C:$Y\w\n$Z\t$P\$$Z "
 }
 
 # titlebar
