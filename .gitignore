@@ -21,3 +21,10 @@ bin/
 .ssh/
 .gtkrc-2.0
 .thumbnails/
+.mpdscribble/
+.ncmpcpp/
+.w3m/
+My Games/
+music/
+.wine/
+tmux-client-*

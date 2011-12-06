@@ -4,6 +4,27 @@
 #
 # Executed by startx (run your window manager from here)
 
+userresources=$HOME/.Xresources
+usermodmap=$HOME/.Xmodmap
+sysresources=/etc/X11/xinit/.Xresources
+sysmodmap=/etc/X11/xinit/.Xmodmap
+
+# merge in defaults and keymaps
+if [ -f $sysresources ]; then
+  xrdb -merge $sysresources
+fi
+if [ -f $sysmodmap ]; then
+  xmodmap $sysmodmap
+fi
+# load my .Xresources and modmap -- includes fixes for xterm
+if [ -f "$userresources" ]; then
+  xrdb -merge "$userresources"
+fi
+if [ -f "$usermodmap" ]; then
+  xmodmap "$usermodmap"
+fi
+
+# load everything in xinitrc.d folder
 if [ -d /etc/X11/xinit/xinitrc.d ]; then
   for f in /etc/X11/xinit/xinitrc.d/*; do
     [ -x "$f" ] && . "$f"
@@ -18,16 +39,8 @@ setterm -blank 0 -powersave off -powerdown 0 &
 # load Xsession scripts (e.g., keytouch)
 /etc/X11/Xsession &
 
-# load .Xresources -- only necessary since I'm using XTerm as my emulator
-xrdb -load ~/.Xresources &
-
 # START A WINDOW MANAGER (required, otherwise x jsut quits)
 # exec gnome-session
 # exec startkde
 # exec startxfce4
-# ...or the Window Manager of your choice
-DEFAULT_SESSION=awesome
-case $1 in
-  awesome|openbox) exec $1 ;;
-  *) exec $DEFAULT_SESSION ;;
-esac
+exec awesome
