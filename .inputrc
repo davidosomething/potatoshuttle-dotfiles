@@ -1,0 +1,5 @@
+#
+# terminal input settings
+#
+
+set completion-ignore-case on

@@ -34,13 +34,12 @@ fi
 
 # disable screensaver/powersaving monitor
 xset s off &
-setterm -blank 0 -powersave off -powerdown 0 & 
+setterm -blank 0 -powersave off -powerdown 0 &
 
-# load Xsession scripts (e.g., keytouch)
-/etc/X11/Xsession &
+# custom script to keep a tmux session alive when X is running
+/home/davidosomething/bin/persist-tmux.sh &
 
 # START A WINDOW MANAGER (required, otherwise x jsut quits)
 # exec gnome-session
-# exec startkde
-# exec startxfce4
-exec awesome
+# exec awesome
+exec openbox-session

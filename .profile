@@ -1,3 +1,1 @@
-if [ -n "$DISPLAY" ]; then
-    BROWSER=chromium
-fi
+# useless file, use .bash_profile
