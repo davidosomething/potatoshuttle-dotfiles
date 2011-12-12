@@ -36,6 +36,9 @@ fi
 xset s off &
 setterm -blank 0 -powersave off -powerdown 0 &
 
+# clipboard manager (DE/WM independent so not in openbox autostart)
+parcellite &
+
 # custom script to keep a tmux session alive when X is running
 /home/davidosomething/bin/persist-tmux.sh &
 

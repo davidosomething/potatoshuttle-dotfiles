@@ -37,3 +37,10 @@ torrent/
 torrents/
 .gtk-bookmarks
 .htoprc
+.x11vnc/
+.asoundrc
+.bazaar/
+.bzr.log
+tmp/
+.xbmc/
+.gmrun_history

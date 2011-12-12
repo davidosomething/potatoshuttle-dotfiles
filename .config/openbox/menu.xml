@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openbox_menu xmlns="http://openbox.org/3.4/menu">
 	<menu id="system-menu" label="System">
+		<item label="GTK+ Theme Configuration">
+			<action name="Execute">
+				<execute>
+					lxappearance
+				</execute>
+			</action>
+		</item>
 		<item label="tint2 Configuration">
 			<action name="Execute">
 				<execute>
 					/usr/bin/tint2conf
+				</execute>
+			</action>
+		</item>
+		<item label="Openbox Key Editor">
+			<action name="Execute">
+				<execute>
+					obkey
 				</execute>
 			</action>
 		</item>
@@ -25,6 +39,13 @@
 						yes
 					</enabled>
 				</startupnotify>
+			</action>
+		</item>
+		<item label="Edit Openbox rc.xml">
+			<action name="Execute">
+				<execute>
+					gvim /home/davidosomething/.config/openbox/rc.xml
+				</execute>
 			</action>
 		</item>
 		<separator/>

@@ -18,7 +18,7 @@ alias detach="tmux detach"
 alias vi="vim"
 alias mvim="gvim"
 alias steam='WINEDEBUG=-all wine ~/.wine/drive_c/Program\ Files/Steam/Steam.exe -dxlevel 90 >/dev/null 2>&1 &'
-alias steamdbg='WINEDEBUG=warn+all wine ~/.wine/drive_c/Program\ Files/Steam/Steam.exe -dxlevel 90 >/dev/null 2>&1 &'
+alias steamdbg='WINEDEBUG=warn+all wine ~/.wine/drive_c/Program\ Files/Steam/Steam.exe -dxlevel 90 &'
 
 # variables
 if [ -n "$DISPLAY" ]; then # X available?
