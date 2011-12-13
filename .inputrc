@@ -2,4 +2,13 @@
 # terminal input settings
 #
 
-set completion-ignore-case on
+# ctrl-left/right to move words in prompt
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
+
+$if Bash
+  set completion-ignore-case on
+  set show-all-if-ambiguous on
+  set mark-directories on
+  set mark-symlinked-directories on
+$endif

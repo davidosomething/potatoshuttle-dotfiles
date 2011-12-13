@@ -6,6 +6,7 @@
 [[ $- != *i* ]] && return
 
 # shell options
+set -o notify
 shopt -s checkwinsize # fix bash line wrapping when window size changes
 shopt -s nocaseglob   # case insensitive
 shopt -s extglob      # extended globbing
