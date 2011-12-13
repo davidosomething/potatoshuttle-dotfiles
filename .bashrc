@@ -47,10 +47,9 @@ bash_prompt() {
   local P="\[\033[0;35m\]"
   local C="\[\033[0;36m\]"
   local W="\[\033[0;37m\]"
-  PS1="$G\u$B@$G\h$C:$Y\w\n$Z\t$P$(__git_ps1 "(%s)")\$$Z "
+  export PS1="$G\u$B@$G\h$C:$Y\w\n$Z\t$P"'$(__git_ps1 "(%s)")'"\$$Z "
 }
 bash_prompt
-unset bash_prompt
 
 # titlebar
 case ${TERM} in
