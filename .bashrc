@@ -8,6 +8,7 @@
 # shell options
 shopt -s checkwinsize # fix bash line wrapping when window size changes
 shopt -s nocaseglob   # case insensitive
+shopt -s extglob      # extended globbing
 shopt -s cdspell      # fix small typos
 
 # global variables available to all apps
@@ -32,12 +33,15 @@ fi
 # aliases
 alias grep="grep --color"
 alias ls="ls --color"
-alias ll="ls -la"
+alias ll="ls -Al --group-directories-first"
 alias detach="tmux detach"
 alias vi="vim"
 alias mvim="gvim"
 alias steam='WINEDEBUG=-all wine ~/.wine/drive_c/Program\ Files/Steam/Steam.exe -dxlevel 90 >/dev/null 2>&1 &'
 alias steamdbg='WINEDEBUG=warn+all wine ~/.wine/drive_c/Program\ Files/Steam/Steam.exe -dxlevel 90 &'
+
+# background
+function chromium() { command chromium "$@" & }
 
 # prompt
 bash_prompt() {
