@@ -34,8 +34,8 @@ export HISTSIZE=5000
 #export WINEARCH=win32 winecfg # skyrim should work in X86_64 mode
 
 # prompt
-GIT_PS1_SHOWDIRTYSTATE=true
-GIT_PS1_SHOWUNTRACKEDFILES=true
+export GIT_PS1_SHOWDIRTYSTATE=1
+#export GIT_PS1_SHOWUNTRACKEDFILES=1
 [[ -f /usr/share/git/completion/git-completion.bash ]] && . /usr/share/git/completion/git-completion.bash
 bash_prompt() {
   local Z="\[\033[0m\]"
