@@ -28,7 +28,7 @@ else
 fi
 
 # includes
-#[[ -x /usr/share/git/completion/git-completion.bash ]] && . /usr/share/git/completion/git-completion.bash
+[[ -x /usr/share/git/completion/git-completion.bash ]] && . /usr/share/git/completion/git-completion.bash
 # don't need this, /etc/bash.bashrc adds bash completion which includes it
 
 # aliases

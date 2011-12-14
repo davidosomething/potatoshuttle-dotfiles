@@ -69,6 +69,13 @@
 				</execute>
 			</action>
 		</item>
+		<item label="XBMC">
+			<action name="Execute">
+				<execute>
+					xbmc
+				</execute>
+			</action>
+		</item>
 		<item label="File Manager">
 			<action name="Execute">
 				<execute>
