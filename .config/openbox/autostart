@@ -8,8 +8,8 @@ hsetroot -tile /home/davidosomething/pictures/wallpaper/crissXcross.png &
 tint2 &
 
 # PROGRAMS TO AUTOSTART
-Xterm &
-sickbeard &
+xterm &
+sickbeard --datadir /home/davidosomething/.sickbeard/ --config /home/davidosomething/.sickbeard/config.ini &
 
 
 # If you want to use GNOME config tools...
