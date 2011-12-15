@@ -45,3 +45,4 @@ tmp/
 .xbmc/
 .gmrun_history
 .sickbeard/
+.gstreamer-0.10/

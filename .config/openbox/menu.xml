@@ -83,6 +83,13 @@
 				</execute>
 			</action>
 		</item>
+		<item label="CD Burning">
+			<action name="Execute">
+				<execute>
+					xfburn
+				</execute>
+			</action>
+		</item>
 		<menu id="system-menu"/>
 		<separator/>
 		<item label="Log Out">
