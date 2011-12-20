@@ -46,8 +46,6 @@ function chromium() { command chromium "$@" & }
 
 # prompt
 bash_prompt() {
-  GIT_PS1_SHOWDIRTYSTATE=1
-  #GIT_PS1_SHOWUNTRACKEDFILES=1
   local Z="\[\033[0m\]"
   local K="\[\033[0;30m\]"
   local R="\[\033[0;31m\]"
@@ -57,6 +55,17 @@ bash_prompt() {
   local P="\[\033[0;35m\]"
   local C="\[\033[0;36m\]"
   local W="\[\033[0;37m\]"
-  export PS1="$G\u$B@$G\h$C:$Y\w\n$Z\t$P"'$(__git_ps1 "(%s)")'"\$$Z "
+
+  GIT_PS1_SHOWDIRTYSTATE=1
+  #GIT_PS1_SHOWUNTRACKEDFILES=1
+
+  # white if remote, green if local
+  if [ -z "$SSH_CONNECTION" ]; then
+    local HOST="$G\h"
+  else
+    local HOST="$W\h"
+  fi
+
+  export PS1="$G\u$B@$HOST$C:$Y\w\n$Z\t$P"'$(__git_ps1 "(%s)")'"\$$Z "
 }
 bash_prompt

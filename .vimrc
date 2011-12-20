@@ -57,4 +57,6 @@ set nowrap
 " set listchars=tab:▸\ ,trail:·
 " set list listchars=tab:\ \ ,trail:·
 set list listchars=tab:▸\ ,trail:·
-
+" sane up and down for wraps
+map j gj
+map k gk
